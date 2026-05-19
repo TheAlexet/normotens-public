@@ -1,16 +1,104 @@
-# React + Vite
+# Normotens
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Normotens is a React application for tracking blood pressure and related wellness information. The project is built with React, Vite, Material UI, and React Router.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- Material UI (MUI)
+- React Router
+- JavaScript
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Light and dark theme support
+- Custom color and typography system
+- Home screen with centered image from local assets
+- Privacy Policy page rendered from Markdown
+- English and Spanish privacy policy content
+- Client-side routing with React Router
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+src/
+  assets/
+  content/
+    privacy-policy.md
+    privacy-policy.es.md
+  pages/
+    Home.jsx
+    PrivacyPolicy.jsx
+  theme/
+    theme.js
+    typography.js
+    muiTheme.js
+  App.jsx
+  main.jsx
+```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/normotens.git
+cd normotens
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Vite usually starts the app at:
+
+```bash
+http://localhost:5173
+```
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+### 5. Preview the production build
+
+```bash
+npm run preview
+```
+
+## Available Routes
+
+- `/` — Home page
+- `/privacy-policy/` — Privacy Policy page
+
+## Theming
+
+The app uses custom theme tokens defined in separate files:
+
+- `src/theme/theme.js` for light and dark color palettes
+- `src/theme/typography.js` for typography settings
+- `src/theme/muiTheme.js` to map custom tokens into Material UI
+
+## Privacy Policy
+
+The privacy policy content is stored as Markdown files and rendered in the app using `react-markdown`.
+
+## Notes
+
+- This project uses Vite, so the correct development command is `npm run dev`, not `npm start`.
+- Do not commit `node_modules` or `.env` files.
+
+## License
+
+This project is for private development unless you add a license file.
